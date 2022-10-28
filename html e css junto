@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<HTML lang="pt-br">
+    <Head>
+        <title>Meu primeiro HTML</title>
+        <link rel="stylesheet" href="style.css";>
+    </Head>
+    <body style="background-color:white; color: red ">
+    <div class="box200">
+        lab utilizado
+    </div>
+    </body>
+</HTML>
