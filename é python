@@ -1,0 +1,31 @@
+# Definir o número de jogadores e a quantidade inicial de dinheiro
+num_jogadores = 3
+dinheiro_inicial = 1000
+
+# Criar uma lista de jogadores e atribuir a cada jogador uma quantidade inicial de dinheiro
+jogadores = []
+for i in range(num_jogadores):
+    jogador = {"nome": f"Jogador {i+1}", "dinheiro": dinheiro_inicial}
+    jogadores.append(jogador)
+
+# Lista de jogadas realizadas pelos jogadores
+jogadas = [
+    {"jogador": 1, "valor": -100},
+    {"jogador": 2, "valor": 50},
+    {"jogador": 3, "valor": -200},
+    {"jogador": 1, "valor": 300},
+    {"jogador": 2, "valor": -50},
+    {"jogador": 3, "valor": -100},
+    {"jogador": 1, "valor": -50},
+    {"jogador": 2, "valor": 100},
+    {"jogador": 3, "valor": -50}
+]
+
+# Calcular a quantidade de dinheiro acumulada por cada jogador
+for jogada in jogadas:
+    jogador = jogadores[jogada["jogador"] - 1]
+    jogador["dinheiro"] += jogada["valor"]
+
+# Exibir a quantidade de dinheiro acumulada por cada jogador
+for jogador in jogadores:
+    print(f"{jogador['nome']} tem {jogador['dinheiro']} reais")
